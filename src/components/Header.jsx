@@ -1,14 +1,17 @@
-function Header(){
-    return (
-        <header>
-            <h2>Starbucks</h2>
-            <nav>
-                <a href="">Home</a>
-                <a href="">Menu</a>
-                <a href="">Offers</a>
-                <a href="">Contact</a>
-            </nav>
-        </header>
-    )
+function Header({ links, name }) {
+  return (
+    <header>
+      <h2>{name}</h2>
+      <nav>
+        {links.map((link) => {
+          return (
+            <a key={link} href="/">
+              {link}
+            </a>
+          );
+        })}
+      </nav>
+    </header>
+  );
 }
 export default Header;

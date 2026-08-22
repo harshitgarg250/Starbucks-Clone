@@ -4,9 +4,11 @@ import Hero from "./components/Hero";
 import Footer from "./components/Footer";
 
 function App() {
+  const profilename = "Starbucks";
+  const navigationLinks = ["Home", "Menu", "Offers", "Contact","Rewards","store Locator"];
   return (
     <>
-      <Header />
+      <Header links={navigationLinks}  name={profilename}/>
       <Hero />
       <Footer />
     </>
