@@ -1,0 +1,32 @@
+*{
+  box-sizing : border-box;
+}
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+}
+header{
+  display :flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  border-bottom: 1px solid #ddd;
+}
+nav {
+  display: flex;
+  gap: 20px;
+}
+nav a {
+  text-decoration: none;
+  color: #222;
+}
+
+main {
+  padding: 80px 40px;
+  text-align: center;
+}
+footer {
+  padding: 30px 40px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
