@@ -1,4 +1,11 @@
+import {useState} from 'react';
 function Header({ links, name }) {
+  const [isLoggedIn , setIsLoggedIn] = useState(false);
+
+  function handleLogin(){
+    // setIsLoggedIn(!isLoggedIn);
+    setIsLoggedIn((previousValue)=>!previousValue); 
+  }
   return (
     <header>
       <h2>{name}</h2>
@@ -11,6 +18,12 @@ function Header({ links, name }) {
           );
         })}
       </nav>
+      <button onClick={handleLogin}>{isLoggedIn ? "Logout" : "Login"}</button>
+      <p>
+        {isLoggedIn
+        ?"welcome to starbucks!"
+      :"Please login to continue"}
+      </p>
     </header>
   );
 }
