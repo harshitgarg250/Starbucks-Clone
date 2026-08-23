@@ -1,12 +1,19 @@
-function Hero() {
+import React from 'react'
+
+function Hero({title, description , buttonText,buttonText1 , image}) {
   return (
-    <main>
-      <h1>Its a great day for coffee</h1>
-      <p>Discover your favorite Starbucks beverages.</p>
-      <button>Order Now</button>
-      <button>Explore Menu</button>
-    </main>
-  );
+    <section className="hero">
+    <div classname="hero-content">
+      <h1>{title}</h1>
+      <p>{description}</p>
+      <button>{buttonText}</button>
+      <button>{buttonText1}</button>
+    </div>
+    <div className="hero-image">
+      <img src={image} alt="Coffe beverage" />
+    </div>
+    </section>
+  )
 }
 
-export default Hero;
+export default Hero
