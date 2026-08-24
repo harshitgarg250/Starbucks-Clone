@@ -3,7 +3,7 @@ import React from 'react'
 function Hero({title, description , buttonText,buttonText1 , image}) {
   return (
     <section className="hero">
-    <div classname="hero-content">
+    <div className="hero-content">
       <h1>{title}</h1>
       <p>{description}</p>
       <button>{buttonText}</button>
