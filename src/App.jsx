@@ -2,11 +2,32 @@ import React from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Footer from "./components/Footer";
+import ProductCard from "./components/ProductCard";
 import heroCoffee from "./assets/hero-coffee.jpg"
 
 function App() {
   const profilename = "Starbucks";
   const navigationLinks = ["Home", "Menu", "Offers", "Contact","Rewards","store Locator"];
+  const products = [
+  {
+    id: 1,
+    name: "Cold Coffee",
+    price: 250,
+    image: heroCoffee,
+  },
+  {
+    id: 2,
+    name: "Cappuccino",
+    price: 280,
+    image: heroCoffee,
+  },
+  {
+    id: 3,
+    name: "Cafe Latte",
+    price: 260,
+    image: heroCoffee,
+  },
+];
   return (
     <>
       <Header links={navigationLinks}  name={profilename}/>
@@ -17,6 +38,19 @@ function App() {
         buttonText="Order Now"
         image = {heroCoffee}
          />
+        <section>
+          <h2>Popular Drinks</h2>
+          <div>
+            {products.map((product)=>(
+              <ProductCard
+                key={product.id}
+                name ={product.name}
+                price={product.price}
+                image={product.image}
+                />
+            ))}
+          </div>
+        </section>
       <Footer />
     </>
   );
